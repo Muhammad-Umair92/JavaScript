@@ -68,34 +68,18 @@ console.log('*******************************************************************
 
 // # 16 More Guests: You just found a bigger dinner table, so now more space is available. Think of three more guests to invite to dinner.
 console.log('Dear members we found a bigger dinner table. We may have some more guests at dinner')
-console.log({ guest_list })
-guest_list.unshift('Fatima Jinnah')
+guest_list.unshift('Rashid Minhas')
 guest_list.splice(2, 0, 'Major Aziz Bhatti')
-guest_list.push('Rashid Minhas')
-console.log({ guest_list })
+guest_list.push('Fatima Jinnah')
 guest_list.map((name) => console.log('Dear Sir ' + name + ' I would like to invite you to dinner at my home.'))
 console.log('***********************************************************************************************')
 
 
 // #17 Shrinking Guest List:
 console.log('Dear members we are sorry to announce that our new dinning table won’t arrive in time for the dinner, and we have space for only two guests.')
-
-guest_list.map((name) => {
-    let noOfGuests = guest_list.length
-    console.log({ noOfGuests })
-
-    if (noOfGuests > 2) {
-        const guestNotInvited = guest_list.pop()
-        console.log(guest_list.length, '^^^^^^^^^^^')
-
-        console.log({ guest_list })
-        console.log(`Dear Sir ${guestNotInvited}, we are really sorry that we have space for only two guests that's why we can not invite you this time we will arrage it again as soon as our new dinning table arrives`)
-    }
-    else {
-        console.log({ name })
-        // noOfGuests = guest_list.length
-    }
-})
-console.log({ guest_list })
-console.log(guest_list.length, '############')
+let noOfGuests = guest_list.length
+while (guest_list.length > 2) {
+    const guestNotInvited = guest_list.pop()
+    console.log(`Respected ${guestNotInvited}, we are really sorry that we have space for only two guests that's why we can not invite you this time we will arrage it again as soon as our new dinning table arrives`)
+}
 guest_list.map((name) => console.log('Dear Sir ' + name + ' I would like to invite you to dinner at my home.'))
