@@ -83,3 +83,7 @@ while (guest_list.length > 2) {
     console.log(`Respected ${guestNotInvited}, we are really sorry that we have space for only two guests that's why we can not invite you this time we will arrage it again as soon as our new dinning table arrives`)
 }
 guest_list.map((name) => console.log('Dear Sir ' + name + ' I would like to invite you to dinner at my home.'))
+while (guest_list.length) {
+    guest_list.pop()
+}
+console.log(guest_list)
